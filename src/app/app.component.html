@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 
 <input type="text" placeholder="Please enter your task here" #task>
-<button (click)="addTask(task.value)">Add your task</button>
+<button (click)="addTask(task.value); task.value=''">Add your task</button>
 <br>
 <br>
 <ul *ngFor="let item of list">

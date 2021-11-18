@@ -12,7 +12,7 @@ export class AppComponent {
 
   addTask(item:string) {
     console.log(item)
-    this.list.push({id: this.list.length, name: item})
+    this.list.unshift({id: this.list.length, name: item})
     console.log(this.list)
   }
 
