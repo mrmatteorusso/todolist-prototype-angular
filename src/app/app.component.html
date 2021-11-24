@@ -1,7 +1,16 @@
 <h1>{{title}}</h1>
 
-<input type="text" placeholder="Please enter your task here" #task>
-<button (click)="addTask(task.value); task.value=''">Add your task</button>
+<!-- <input type="text" placeholder="Please enter your task here" ngModel #task="ngModel">
+<button (click)="addTask(task.value)" ngModel [disabled]="task.value">Add your task</button>
+<br>
+<br>
+<ul *ngFor="let item of list">
+  <li>{{item.name}}<button (click)="deleteTask(item.id)">Delete</button></li>
+</ul> -->
+
+<input type="text" placeholder="Please enter your task here" [(ngModel)]="newTask">
+{{newTask}}
+<button (click)="addTask(newTask)" [disabled]="newTask.length === 0">Add your task</button>
 <br>
 <br>
 <ul *ngFor="let item of list">
